@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entry>
+    <title>jas897dfasdof asd098fuoasdjif asdf</title>
+    <category scheme="http://api.huuto.net/somt/0.9/categories/787"/>
+    <summary>fjkasdkf 98asdfaskjdfnkj asadfdsaf</summary>
+    <expirationTime>2017-12-31</expirationTime>
+    <price>
+        <startingPrice currency="EUR">0</startingPrice>
+    </price>
+    <deliveryMethods>
+        <deliveryMethod type="nouto"/>
+        <deliveryMethod type="posti"/>
+    </deliveryMethods>
+</entry>

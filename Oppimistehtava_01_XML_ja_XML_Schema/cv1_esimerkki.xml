@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cv.xsd">
+  <Identification>
+    <PersonName>
+      <FirstName>FirstName</FirstName>
+      <Surname>Surname</Surname>
+    </PersonName>
+    <ContactInfo>
+      <AddressLine>AddressLine</AddressLine>
+      <PostalCode>PostalCode</PostalCode>
+      <Municipality>Municipality</Municipality>
+      <Country>Country</Country>
+      <Email>Email</Email>
+    </ContactInfo>
+    <Demographics>
+      <Birthdate day="0" month="0" year="2001"/>
+      <Gender>Gender</Gender>
+      <Nationality>Nationality</Nationality>
+    </Demographics>
+  </Identification>
+  <WorkExperienceList>
+    <WorkExperience>
+      <From day="0" month="0" year="2001"/>
+      <To day="0" month="0" year="2001"/>
+      <Position>Position</Position>
+      <Activities>Activities</Activities>
+      <Employer>Employer</Employer>
+    </WorkExperience>
+  </WorkExperienceList>
+</Cv>

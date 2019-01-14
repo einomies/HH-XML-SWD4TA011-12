@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entry>
+    <title>Metallica</title>
+    <category scheme="http://api.huuto.net/somt/0.9/categories/527"/>
+    <summary>pe 11.5.2018, 18:30 Metallica: WorldWired Tour, HARTWALL ARENA, HELSINKI</summary>
+    <expirationTime>2018-05-10</expirationTime>
+    <price>
+        <startingPrice currency="EUR">80.00</startingPrice>
+    </price>
+    <deliveryMethods>
+        <deliveryMethod type="nouto"/>
+        <deliveryMethod type="posti"/>
+    </deliveryMethods>
+</entry>

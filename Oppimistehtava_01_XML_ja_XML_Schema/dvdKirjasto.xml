@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<dvdKirjasto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dvdKirjasto.xsd">
+	<elokuvat>
+		<elokuva nimi="Starship Troopers - Universumin sotilaat" upc="7393834140909">
+			<vaihtoehtoinenNimi>Starship troopers</vaihtoehtoinenNimi>
+			<vuosi>1997</vuosi>
+			<ohjaajat>
+				<ohjaaja>
+					<nimi>Paul Verhoeven</nimi>
+					<url>http://www.imdb.com/name/nm0000682/</url>
+				</ohjaaja>
+			</ohjaajat>
+			<paaOsissa>
+				<nayttelija>
+					<nimi>Casper Van Dien</nimi>
+					<url>http://www.imdb.com/name/nm0000680/</url>
+				</nayttelija>
+				<nayttelija>
+					<nimi>Dina Meyer</nimi>
+					<url>http://www.imdb.com/name/nm0000539/</url>
+				</nayttelija>
+				<nayttelija>
+					<nimi>Denise Richards</nimi>
+					<url>http://www.imdb.com/name/nm0000612/</url>
+				</nayttelija>
+			</paaOsissa>
+			<kuvaUri>http://ia.media-imdb.com/images/M/MV5BMTI0MTk2MjQ2Nl5BMl5BanBnXkFtZTYwOTYwNjA5._V1._SY317_CR11,0,214,317_.jpg
+			</kuvaUri>
+			<formaatti>dvd</formaatti>
+			<lainassa>
+				<lainaajanNimi>Veijo Vanamo</lainaajanNimi>
+				<lainattu>2009-04-06</lainattu>
+				<palautettu>2009-03-04</palautettu>
+			</lainassa>
+			<hankittu>
+				<ostoPvm>2008-02-04</ostoPvm>
+				<hinta>13.90</hinta>
+				<ostopaikka>http://www.play.com</ostopaikka>
+			</hankittu>
+		</elokuva>
+		<elokuva nimi="Taistelija" upc="5706550022688">
+			<vaihtoehtoinenNimi>First blood</vaihtoehtoinenNimi>
+			<vaihtoehtoinenNimi>Rambo</vaihtoehtoinenNimi>
+			<vuosi>1982</vuosi>
+			<ohjaajat>
+				<ohjaaja>
+					<nimi>Ted Kotcheff</nimi>
+					<url>http://www.imdb.com/name/nm0467646/</url>
+				</ohjaaja>
+			</ohjaajat>
+			<paaOsissa>
+				<nayttelija>
+					<nimi>Sylvester Stallone</nimi>
+					<url>http://www.imdb.com/name/nm0000230/</url>
+				</nayttelija>
+				<nayttelija>
+					<nimi>Richard Crenna</nimi>
+					<url>http://www.imdb.com/name/nm0001077/</url>
+				</nayttelija>
+			</paaOsissa>
+			<kuvaUri>http://ia.media-imdb.com/images/M/MV5BMTg4Mjc0MDQ0Nl5BMl5BanBnXkFtZTcwMzE1MDcyMQ@@._V1._SY317_CR8,0,214,317_.jpg</kuvaUri>
+			<formaatti>dvd</formaatti>
+			<hankittu>
+				<ostoPvm>2003-05-08</ostoPvm>
+				<hinta>6.90</hinta>
+				<ostopaikka>Anttila, Jyväskylä</ostopaikka>
+			</hankittu>
+		</elokuva>
+		<elokuva nimi="Talvisota" upc="6415018606696">
+			<vuosi>1989</vuosi>
+			<ohjaajat>
+				<ohjaaja>
+					<nimi>Pekka Parikka</nimi>
+					<url>http://www.imdb.com/name/nm0661502/</url>
+				</ohjaaja>
+			</ohjaajat>
+			<paaOsissa>
+				<nayttelija>
+					<nimi>Taneli Mäkelä</nimi>
+					<url>http://www.imdb.com/name/nm0617427/</url>
+				</nayttelija>
+				<nayttelija>
+					<nimi>Vesa Vierikko</nimi>
+					<url>http://www.imdb.com/name/nm0896801/</url>
+				</nayttelija>
+				<nayttelija>
+					<nimi>Timo Torikka</nimi>
+					<url>http://www.imdb.com/name/nm0868039/</url>
+				</nayttelija>
+			</paaOsissa>
+			<kuvaUri>http://upload.wikimedia.org/wikipedia/en/b/b5/Talvisota_DVD_cover.PNG</kuvaUri>
+			<formaatti>dvd</formaatti>
+			<hankittu>
+				<ostoPvm>2001-03-30</ostoPvm>
+				<hinta>16.90</hinta>
+				<ostopaikka>Anttila, Jyväskylä</ostopaikka>
+			</hankittu>
+		</elokuva>
+	</elokuvat>
+</dvdKirjasto>

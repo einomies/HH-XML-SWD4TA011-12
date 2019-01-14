@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<tilaukset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tilaukset.xsd">
+	<tilaus tilausnumero="1" tila="toimitettu">
+		<asiakas luottokelpoisuus="hyvä">
+			<nimi>Oy Yritys Ab</nimi>
+			<laskutusosoite>
+				<lahiosoite>Katu 1</lahiosoite>
+				<postinumero>12345</postinumero>
+				<postitoimipaikka>KYLÄLÄ</postitoimipaikka>
+			</laskutusosoite>
+			<puhelin>
+				<suunta>09</suunta>
+				<numero>1234567</numero>
+			</puhelin>
+		</asiakas>
+		<tilausrivi tuotekoodi="t12345">
+			<maara yksikko="kg">2</maara>
+			<hinta yksikko="kg" valuutta="dollari">123.90</hinta>
+		</tilausrivi>
+		<tilausrivi tuotekoodi="t54321">
+			<maara yksikko="kpl">12</maara>
+			<hinta yksikko="kpl" valuutta="euro">24.00</hinta>
+		</tilausrivi>
+	</tilaus>
+</tilaukset>

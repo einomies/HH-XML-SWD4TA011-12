@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="tilaukset">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="tilaus" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="asiakas">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nimi" type="nimiType"/>
+										<xs:element name="laskutusosoite">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="lahiosoite" type="xs:string"/>
+													<xs:element name="postinumero" type="xs:int"/>
+													<xs:element name="postitoimipaikka" type="postitoimipaikkaType"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="toimitusosoite" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="lahiosoite" type="xs:string"/>
+													<xs:element name="postinumero" type="xs:int"/>
+													<xs:element name="postitoimipaikka" type="postitoimipaikkaType"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="puhelin">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="suunta" type="xs:string"/>
+													<xs:element name="numero" type="xs:string"/>
+												</xs:sequence>
+												<xs:attribute name="tyyppi" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="luottokelpoisuus" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="tilausrivi" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="maara">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="maaraType">
+														<xs:attribute name="yksikko" type="xs:string" default="kpl"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="hinta" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:decimal">
+														<xs:attribute name="yksikko" type="xs:string" use="required"/>
+														<xs:attribute name="valuutta" type="xs:string" default="euro"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="tuotekoodi" type="tuotenumeroType" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="tila" type="tilaType" default="tilattu"/>
+						<xs:attribute name="tilausnumero" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element> 
+	
+	<xs:simpleType name="maaraType">
+		<xs:restriction base="xs:unsignedShort">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="10000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="nimiType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tilaType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="tilattu"/>
+			<xs:enumeration value="toimitettu"/>
+			<xs:enumeration value="odottaa"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tuotenumeroType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="t\d{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="postitoimipaikkaType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-ZÅÄÖ\-]{2,50}"/>
+		</xs:restriction>
+	</xs:simpleType>
+		
+</xs:schema>

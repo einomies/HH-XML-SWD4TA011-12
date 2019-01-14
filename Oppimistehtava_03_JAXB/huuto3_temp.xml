@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entry>
+    <title>Nappiset Adidas Predator, koko 38</title>
+    <summary>Hyväkuntoiset ja vähän käytetyt futiskengät keinonurmelle</summary>
+    <expirationTime>2017-12-01</expirationTime>
+    <price>
+        <startingPrice currency="EUR">199.0</startingPrice>
+    </price>
+    <deliveryMethods>
+        <deliveryMethod type="posti"/>
+        <deliveryMethod type="nouto"/>
+    </deliveryMethods>
+</entry>

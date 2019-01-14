@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="yes"?>
+<henkilo tunnus="marsi" xsi:noNamespaceSchemaLocation="henkilo.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <hetu>123456-123A</hetu>
+    <nimi>
+        <sukunimi>Marttila</sukunimi>
+        <etunimi>Sirpa</etunimi>
+    </nimi>
+    <osoite>
+        <lahiosoite>Ratapihantie 13</lahiosoite>
+        <postinumero>00520</postinumero>
+        <postitoimipaikka>HELSINKI</postitoimipaikka>
+    </osoite>
+    <tiimi asema="jäsen" nimi="Tiedonhallinta"/>
+    <email>sirpa.marttila@haaga-helia.fi</email>
+    <puhelin type="keskus">09 229 611</puhelin>
+    <puhelin type="työ">040 488 7288</puhelin>
+    <nimike>Lehtori</nimike>
+</henkilo>

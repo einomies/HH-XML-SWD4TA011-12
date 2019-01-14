@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="huuto3.xsd">
+  <title>title</title>
+  <category scheme="http://tempuri.org"/>
+  <summary>summary</summary>
+  <expirationTime>2001-01-01</expirationTime>
+  <price>
+    <startingPrice currency="">0.0</startingPrice>
+    <minimumIncrease currency="">0.0</minimumIncrease>
+    <buyNowPrice currency="">0.0</buyNowPrice>
+  </price>
+  <deliveryMethods>
+    <deliveryMethod type=""/>
+  </deliveryMethods>
+</entry>

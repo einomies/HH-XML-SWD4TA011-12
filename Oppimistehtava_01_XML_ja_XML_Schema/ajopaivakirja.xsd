@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="ajopaivakirja">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ajo" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="alku" type="alkuLoppuType" minOccurs="1" />
+							<xs:element name="loppu" type="alkuLoppuType" minOccurs="1" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="rekisterinro" type="xs:string" use="required" />
+			<xs:attribute name="laatija" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="alkuLoppuType">
+		<xs:sequence>
+	    	<xs:element name="lukema" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="aika" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:token">
+							<xs:attribute name="kello" type="xs:token" use="required"/>
+							<xs:attribute name="paiva" type="xs:token" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="paikka" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

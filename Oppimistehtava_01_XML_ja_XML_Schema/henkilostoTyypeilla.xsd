@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="henkilosto">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="henkilo" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="hetu" type="xs:string"/>
+							<xs:element name="nimi">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="sukunimi" type="NimistringType"/>
+										<xs:element name="etunimi" type="NimistringType" maxOccurs="3"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="osoite" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="lahiosoite" type="xs:string" minOccurs="0"/>
+										<xs:element name="postinumero" type="PostinumeroType"/>
+										<xs:element name="postitoimipaikka" type="NimistringType"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="tiimi" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="nimi" type="NimistringType" use="required"/>
+									<xs:attribute name="asema" type="AsemaType" default="jäsen"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="email" type="EmailType"/>
+							<xs:element name="puhelin" maxOccurs="3">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="type" type="PuhelintyyppiType" default="työ"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="nimike" type="xs:string"/>
+							<xs:element name="tyohuone" minOccurs="0">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="sijainti" type="SijaintiType" default="Helia1"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="tunnus" type="TunnusType" use="required"/>
+						<xs:attribute name="esimies" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="NimistringType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zåäöA-ZÅÄÖ\-]{2,20}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PostinumeroType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AsemaType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="jäsen"/>
+			<xs:enumeration value="vetäjä"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EmailType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z\-]+\.?[a-zA-Z\-]+@[a-zA-Z\-]+\.[a-zA-Z]{1,3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PuhelintyyppiType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="työ"/>
+			<xs:enumeration value="keskus"/>
+			<xs:enumeration value="gsm"/>
+			<xs:enumeration value="koti"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SijaintiType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="R1"/>
+			<xs:enumeration value="R2"/>
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="P"/>
+			<xs:enumeration value="Helia1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TunnusType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

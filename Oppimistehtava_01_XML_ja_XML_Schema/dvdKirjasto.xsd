@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="dvdKirjasto">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="elokuvat">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="elokuva" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="vaihtoehtoinenNimi" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+										<xs:element name="vuosi" type="xs:unsignedShort"/>
+										<xs:element name="ohjaajat" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ohjaaja" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="nimi" type="xs:string"/>
+																<xs:element name="url" type="xs:anyURI"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<!-- ohjaaja -->
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<!-- ohjaajat -->
+										<xs:element name="paaOsissa">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nayttelija" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="nimi" type="xs:string"/>
+																<xs:element name="url" type="xs:anyURI"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<!-- nayttelija -->
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<!-- paaOsissa -->
+										<xs:element name="kuvaUri" type="xs:anyURI"/>
+										<xs:element name="formaatti" type="xs:string"/>
+										<xs:element name="lainassa" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="lainaajanNimi" type="xs:string"/>
+													<xs:element name="lainattu" type="xs:date"/>
+													<xs:element name="palautettu" type="xs:date"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<!-- lainassa -->
+										<xs:element name="hankittu">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ostoPvm" type="xs:date"/>
+													<xs:element name="hinta" type="xs:float"/>
+													<xs:element name="ostopaikka" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<!-- hankittu -->
+									</xs:sequence>
+									<xs:attribute name="nimi" type="xs:string" use="required"/>
+									<xs:attribute name="upc" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<!-- elokuva -->
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<!-- elokuvat -->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--dvdKirjasto-->
+</xs:schema>
